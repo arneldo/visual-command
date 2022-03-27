@@ -14,7 +14,7 @@ def visual_plotter(x,y):
     plt.xlabel("nth day of January 2022")
     plt.ylabel("Userbase count")
     plt.show()
-    plt.clear_plot() #Clear the settings for the figure that was built last. If this was not was not present the same graph would be plotted even with different inputs.
+    plt.clear_plot() #Clear the settings for the figure that was built last. If this was not present the same graph would be plotted even with different inputs.
 
 
 def sieve(start,end):
@@ -23,7 +23,7 @@ def sieve(start,end):
 
     if start.isdigit() and end.isdigit() and 0 < int(start) < int(end) < len(data) + 1: #Check if inputs are digits and the start date is smaller than the end date.
             for key,value in data.items():
-                if int(start)-1 < int(key[0:2]) < int(end)+1:# storing all dates that are within our dersired range.
+                if int(start)-1 < int(key[0:2]) < int(end)+1:# storing all dates that are within our desired range.
                     hor_axis.append(int(key[:2]))
                     ver_axis.append(int(value))
             visual_plotter(hor_axis,ver_axis) #Call to method that does the plotting
@@ -49,7 +49,7 @@ def sieve(start,end):
 # print(len(data))
 if __name__ == "__main__":
     print("Hey, Let's have a look at how our userbase has been growing")
-    print("The dates range from the 1st of Jan to the 15th of Jan at the moment.")
+    print("The dates range from the 1st of Jan to the ",len(data)," of Jan at the moment.")
     print("To exit enter a negative start/end date or non digit value as input.")
     print("\n")
     start = input("Enter start date: ")
