@@ -27,7 +27,6 @@ def sieve(start,end):
                     hor_axis.append(int(key[:2]))
                     ver_axis.append(int(value))
             visual_plotter(hor_axis,ver_axis) #Call to method that does the plotting
-            # print("----------------------------")
             print("\n")
 
     elif (start.isdigit() and end.isdigit() and len(data)+ 1 > int(start) > int(end) > 0): #If end date is smaller than the start date the two dates are swopped.
@@ -36,7 +35,6 @@ def sieve(start,end):
                 hor_axis.append(int(key[:2]))
                 ver_axis.append(int(value))
         visual_plotter(hor_axis,ver_axis)
-        # print("----------------------------")
         print("\n")
 
     elif (start.isdigit() and end.isdigit()):
